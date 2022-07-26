@@ -1,22 +1,22 @@
 import java.util.Scanner;
 
-public class palindrome {
+public class strinpalindrome {
     public static void main(String[] args) {
-        int r,sum=0,temp;
-        System.out.println("enter a number");
-        Scanner s= new Scanner(System.in);
-        int num=s.nextInt();
-        temp=num;
-        while(num>0){
-            r= num%10;
-            sum=(sum*10)+r;
-            num=num/10;
-        }
-        if (temp==sum){
-            System.out.println("number is pallindrome");
-        }
-        else {
-            System.out.println("not pallindrome");
+        int n = 1;
+        while (n > 0) {
+            String word, reverse = "";
+            System.out.println("enter a sring value");
+            Scanner in = new Scanner(System.in);
+            word = in.nextLine();
+            int len = word.length();
+            for (int i = len - 1; i >= 0; i--) {
+                reverse = reverse + word.charAt(i);
+            }
+            if (word.equals(reverse)) {
+                System.out.println("palindrome");
+            } else {
+                System.out.println("not palindrome");
+            }
         }
     }
 }
